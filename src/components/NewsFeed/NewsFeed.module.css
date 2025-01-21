@@ -1,5 +1,27 @@
 .container {
   min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Background Color Classes */
+.bgWhite {
+  background-color: white;
+}
+
+.bgGray100 {
+  background-color: #aaaaaa;
+}
+
+.bgBlue50 {
+  background-color: #77cfff;
+}
+
+.bgGreen50 {
+  background-color: #78ff9c;
+}
+
+.bgPurple50 {
+  background-color: #c182ff;
 }
 
 .content {
@@ -33,6 +55,9 @@
 }
 
 .feed {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   max-width: 42rem;
   margin: 0 auto;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { useToolsPanel } from "../../context/ToolsPanelContext";
 import { ArticleItem } from "../../types/article";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import styles from "./NewsFeed.module.css";
@@ -10,7 +11,8 @@ import {
 } from "../../data/mockArticles";
 
 const NewsFeed: React.FC = () => {
-  // Combine all mock articles into one array
+  const { backgroundColor } = useToolsPanel();
+
   const articles: ArticleItem[] = [
     ...worldNews,
     ...sportsNews,
@@ -19,7 +21,7 @@ const NewsFeed: React.FC = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[backgroundColor]}`}>
       <div className={styles.feed}>
         {articles.map((item) => (
           <ArticleCard key={item.id} {...item} />

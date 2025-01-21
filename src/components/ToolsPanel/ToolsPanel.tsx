@@ -1,58 +1,49 @@
-import React from "react";
-import { X } from "lucide-react";
-import { ToolsPanelProps } from "../../types/toolsPanel";
+import React, { useState } from "react";
+import { Settings2, X } from "lucide-react";
+import { useToolsPanel } from "../../context/ToolsPanelContext";
 import styles from "./ToolsPanel.module.css";
 
-const ToolsPanel: React.FC<ToolsPanelProps> = ({
-  isOpen,
-  onClose,
-  backgroundColor,
-  onBackgroundColorChange,
-  backgroundImage,
-  onBackgroundImageChange,
-}) => (
-  <div
-    className={`${styles.toolsPanel} ${isOpen ? styles.open : styles.closed}`}
-  >
-    <div className={styles.content}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>Customize Feed</h2>
-        <button onClick={onClose} className={styles.closeButton}>
-          <X size={20} />
-        </button>
-      </div>
+const ToolsPanel: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false); // Local state for visibility
+  const { backgroundColor, setBackgroundColor } = useToolsPanel(); // Access context
 
-      <div className={styles.options}>
-        <div className={styles.option}>
-          <label className={styles.label}>Background Color</label>
-          <select
-            value={backgroundColor}
-            onChange={(e) => onBackgroundColorChange(e.target.value)}
-            className={styles.select}
-          >
-            <option value="bg-white">White</option>
-            <option value="bg-gray-100">Light Gray</option>
-            <option value="bg-blue-50">Light Blue</option>
-            <option value="bg-green-50">Light Green</option>
-            <option value="bg-purple-50">Light Purple</option>
-          </select>
-        </div>
+  const togglePanel = () => setIsOpen((prev) => !prev);
 
-        <div className={styles.option}>
-          <label className={styles.label}>Background Image</label>
-          <select
-            value={backgroundImage}
-            onChange={(e) => onBackgroundImageChange(e.target.value)}
-            className={styles.select}
-          >
-            <option value="">None</option>
-            <option value="/api/placeholder/1920/1080">Pattern 1</option>
-            <option value="/api/placeholder/1920/1080">Pattern 2</option>
-          </select>
+  return (
+    <div>
+      {/* Button to toggle ToolsPanel */}
+      <button onClick={togglePanel} className={styles.toggleButton}>
+        <Settings2 size={24} />
+      </button>
+
+      {/* Conditionally render the ToolsPanel content */}
+      {isOpen && (
+        <div className={styles.toolsPanel}>
+          <div className={styles.header}>
+            <h2>Customize Feed</h2>
+            <button onClick={togglePanel} className={styles.closeButton}>
+              <X size={20} />
+            </button>
+          </div>
+
+          {/* Background Color Selector */}
+          <div className={styles.options}>
+            <label>Background Color</label>
+            <select
+              value={backgroundColor}
+              onChange={(e) => setBackgroundColor(e.target.value)}
+            >
+              <option value="bgWhite">White</option>
+              <option value="bgGray100">Light Gray</option>
+              <option value="bgBlue50">Light Blue</option>
+              <option value="bgGreen50">Light Green</option>
+              <option value="bgPurple50">Light Purple</option>
+            </select>
+          </div>
         </div>
-      </div>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 export default ToolsPanel;
