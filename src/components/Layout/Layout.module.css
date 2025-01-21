@@ -1,0 +1,96 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.headerContainer {
+  background-color: #c1c1c1;
+}
+
+/* Main */
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contentContainer {
+  background-color: #666666;
+  padding-top: 1rem;
+}
+
+/* Sidebar */
+.sidebarContainer {
+  background-color: #c3c3c3;
+  position: relative;
+}
+
+.sidebarToggle {
+  display: none; /* Hidden on larger screens */
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebarToggle:hover {
+  background-color: #0056b3;
+}
+
+.sidebarContent {
+  position: relative;
+}
+
+.sidebarClose {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333333;
+}
+
+/* Footer */
+.footerContainer {
+  background-color: #ffffff;
+  color: #9b9b9b;
+}
+
+/* Responsive: Sidebar becomes an overlay on smaller screens */
+@media (max-width: 768px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    transform: translateX(100%); /* Hidden by default */
+    z-index: 999; /* Above everything else */
+  }
+
+  .sidebarOpen {
+    transform: translateX(0); /* Slide in when open */
+  }
+
+  .sidebarToggle {
+    display: block; /* Show toggle button on smaller screens */
+  }
+}

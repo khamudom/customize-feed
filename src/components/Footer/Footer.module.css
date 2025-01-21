@@ -1,0 +1,112 @@
+/* General Footer Styling */
+.footer {
+  background-color: #1f2937; /* Dark background */
+  color: #d1d5db; /* Light gray text */
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Grid layout for footer content */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Brand Section */
+.brand h2 {
+  font-size: 1.75rem; /* Slightly larger */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.brand p {
+  font-size: 0.875rem;
+  color: #9ca3af; /* Slightly lighter gray */
+  line-height: 1.5;
+}
+
+/* Section Headers */
+.section h3 {
+  font-size: 1.25rem; /* More prominent */
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Links Styling */
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #60a5fa; /* Light blue on hover for better contrast */
+}
+
+/* Bottom Section */
+.bottom {
+  border-top: 1px solid #374151; /* Subtle separator */
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Copyright Text */
+.copyright {
+  font-size: 0.875rem;
+  color: #9ca3af; /* Subtle gray */
+}
+
+/* Social Links */
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: #9ca3af;
+  font-size: 1.25rem; /* Slightly larger for emphasis */
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: #60a5fa; /* Light blue on hover */
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  }
+
+  .bottomContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

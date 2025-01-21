@@ -1,0 +1,49 @@
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.contentWrapper {
+  padding: 1.5rem;
+}
+
+.metaWrapper {
+  display: flex;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #4b5563;
+}
+
+.calendar,
+.tag {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
