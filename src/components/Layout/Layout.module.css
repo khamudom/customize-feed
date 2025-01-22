@@ -19,6 +19,7 @@
 
 .contentContainer {
   background-color: #666666;
+  position: relative;
 }
 
 /* Sidebar */

@@ -1,7 +1,7 @@
 /* General Footer Styling */
 .footer {
-  background-color: #1f2937; /* Dark background */
-  color: #d1d5db; /* Light gray text */
+  background-color: var(--background-color);
+  color: var(--text-color);
   padding: 2rem 1rem;
 }
 
@@ -26,13 +26,12 @@
 .brand h2 {
   font-size: 1.75rem; /* Slightly larger */
   font-weight: bold;
-  color: white;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
 .brand p {
   font-size: 0.875rem;
-  color: #9ca3af; /* Slightly lighter gray */
   line-height: 1.5;
 }
 
@@ -40,7 +39,7 @@
 .section h3 {
   font-size: 1.25rem; /* More prominent */
   font-weight: 600;
-  color: white;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -79,7 +78,7 @@
 /* Copyright Text */
 .copyright {
   font-size: 0.875rem;
-  color: #9ca3af; /* Subtle gray */
+  color: var(--text-secondary-color);
 }
 
 /* Social Links */
@@ -89,19 +88,19 @@
 }
 
 .socialLink {
-  color: #9ca3af;
-  font-size: 1.25rem; /* Slightly larger for emphasis */
+  color: var(--text-color);
+  font-size: 1.25rem;
   transition: color 0.2s;
 }
 
 .socialLink:hover {
-  color: #60a5fa; /* Light blue on hover */
+  color: #60a5fa;
 }
 
 /* Responsive Grid */
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .bottomContent {

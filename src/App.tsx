@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import NewsFeed from "./components/NewsFeed/NewsFeed";
 import ToolsPanel from "./components/ToolsPanel/ToolsPanel";
+import ToolsPanelToggle from "./components/ToolsPanelToggle/ToolsPanelToggle";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         sidebar={<ToolsPanel />}
         footer={<Footer />}
       />
+      <ToolsPanelToggle />
     </ToolsPanelProvider>
   );
 };

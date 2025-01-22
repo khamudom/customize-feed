@@ -1,8 +1,9 @@
 .card {
-  background-color: white;
+  background-color: var(--background-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px var(--box-shadow-color);
+  color: var(--text-color);
 }
 
 .image {
@@ -21,7 +22,7 @@
   align-items: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #4b5563;
+  color: var(--text-secondary-color);
 }
 
 .calendar,
@@ -38,11 +39,11 @@
 }
 
 .content {
-  color: #4b5563;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
 .date {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--text-secondary-color);
 }

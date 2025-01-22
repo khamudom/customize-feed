@@ -1,11 +1,25 @@
 .container {
   min-height: 100vh;
   padding: 2rem 0;
+  color: var(--text-color);
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 42rem;
+  margin: 0 auto;
 }
 
 /* Background Color Classes */
 .bgWhite {
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 .bgGray100 {
@@ -22,42 +36,4 @@
 
 .bgPurple50 {
   background-color: #c182ff;
-}
-
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.title {
-  font-size: 1.875rem;
-  font-weight: bold;
-}
-
-.settingsButton {
-  padding: 0.5rem;
-  border-radius: 0.375rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.settingsButton:hover {
-  background-color: #f3f4f6;
-}
-
-.feed {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 42rem;
-  margin: 0 auto;
 }
